@@ -8,7 +8,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ItemCardComponent } from '@app/components/item-card/item-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { CsvModule } from '@ctrl/ngx-csv';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    CsvModule,
   ],
   declarations: [HomeComponent, ItemCardComponent],
   exports: [ItemCardComponent],

@@ -11,13 +11,17 @@ export class HomeComponent implements OnInit {
   quote: string | undefined;
   isLoading = false;
   pokemonList: any[] = [];
+  pokemonListCSV = [{ name: 'charmander' }];
   constructor(private pokeService: PokeapiService) {}
 
   ngOnInit() {
     this.isLoading = true;
+
     for (let index = 1; index <= 150; index++) {
-      this.pokeService.getPokemon(index).subscribe((res) => {
+      this.pokeService.getPokemons(index.toString()).subscribe((res) => {
         this.pokemonList.push(res);
+
+        this.pokemonListCSV.push({ name: res.name });
       });
     }
   }

@@ -17,7 +17,14 @@
     </ion-col>
   </ion-row>
   <ion-row>
-
-    <app-item-card *ngFor="let pokemon of pokemonList| searchFilter: query" [pokemonData]="pokemon"></app-item-card>
+    <ion-col size="12">
+      <ion-button csvLink [data]="pokemonListCSV | searchFilter: query" filename="pokemonData">
+        <ion-icon name="download-outline" slot="start"></ion-icon>
+        Exportar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <app-item-card *ngFor="let pokemon of pokemonList | searchFilter: query" [pokemonData]="pokemon"></app-item-card>
   </ion-row>
 </ion-content>
