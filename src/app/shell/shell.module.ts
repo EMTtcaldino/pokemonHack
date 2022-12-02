@@ -10,7 +10,6 @@ import { ItemCardComponent } from '@app/components/item-card/item-card.component
 
 @NgModule({
   imports: [CommonModule, TranslateModule, IonicModule, I18nModule, RouterModule],
-  declarations: [ShellComponent, ItemCardComponent],
-  exports: [ItemCardComponent],
+  declarations: [ShellComponent],
 })
 export class ShellModule {}

@@ -16,18 +16,12 @@ export class ShellComponent {
     private translateService: TranslateService,
     private platform: Platform,
     private alertController: AlertController,
-    private i18nService: I18nService,
-    private pokeService: PokeapiService
+    private i18nService: I18nService
   ) {}
 
   async ngOnInit(): Promise<void> {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.pokeService.getAllPokemons().subscribe((res) => {
-      res.map((pokemon: any) => {
-        this.pokemonList.push(pokemon);
-      });
-    });
   }
 
   get isWeb(): boolean {

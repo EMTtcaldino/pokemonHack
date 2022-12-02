@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokeapiService } from '@app/services/pokeapi.service';
 import { finalize } from 'rxjs/operators';
 
 import { QuoteService } from './quote.service';
@@ -11,20 +12,15 @@ import { QuoteService } from './quote.service';
 export class HomeComponent implements OnInit {
   quote: string | undefined;
   isLoading = false;
-
-  constructor(private quoteService: QuoteService) {}
+  pokemonList: any[] = [];
+  constructor(private pokeService: PokeapiService) {}
 
   ngOnInit() {
     this.isLoading = true;
-    this.quoteService
-      .getRandomQuote({ category: 'dev' })
-      .pipe(
-        finalize(() => {
-          this.isLoading = false;
-        })
-      )
-      .subscribe((quote: string) => {
-        this.quote = quote;
+    this.pokeService.getAllPokemons().subscribe((res) => {
+      res.results.map((pokemon: any) => {
+        this.pokemonList.push(pokemon);
       });
+    });
   }
 }
