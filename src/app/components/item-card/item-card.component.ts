@@ -11,16 +11,13 @@ export class ItemCardComponent implements OnInit {
   @Input() pokemonData: any;
   constructor(private modalController: ModalController) {}
 
-  ngOnInit(): void {
-    console.log(this.pokemonData);
-  }
+  ngOnInit(): void {}
 
   async showPokemonData(): Promise<void> {
     const modal = await this.modalController.create({
       component: ModalPokemonComponent,
-
       backdropDismiss: false,
-
+      cssClass: 'modal-container',
       componentProps: {
         pokemonData: this.pokemonData,
       },

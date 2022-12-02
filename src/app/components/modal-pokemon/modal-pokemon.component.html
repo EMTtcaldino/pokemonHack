@@ -1,1 +1,33 @@
-<p>modal-pokemon works!</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title
+      ><span translate>{{ pokemonData.name }}</span></ion-title
+    >
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col class="data-pokemon">
+      <ion-img class="img" [src]="pokemonData.sprites.front_default"></ion-img>
+      <ion-row class="name-container">
+        <ion-text>{{ pokemonData.id }}</ion-text> <ion-text>{{ pokemonData.name }}</ion-text>
+      </ion-row>
+      <ion-row class="types">
+        <ion-badge *ngFor="let type of pokemonData.types">{{ type.type.name }}</ion-badge>
+      </ion-row>
+
+      <ion-text>Stats:</ion-text>
+      <ion-row *ngFor="let stat of pokemonData.stats">
+        <ion-text class="stat-name">{{ stat.stat.name }} :</ion-text>
+        <ion-text>{{ stat.base_stat }}</ion-text>
+      </ion-row>
+    </ion-col>
+
+    <ion-col> </ion-col>
+  </ion-row>
+</ion-content>

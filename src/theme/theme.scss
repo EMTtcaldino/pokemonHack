@@ -2,3 +2,7 @@
  * Global application theme.
  * Framework overrides and customization goes here.
  */
+.modal-container {
+  --height: 70vh !important;
+  --width: 60vw !important;
+}

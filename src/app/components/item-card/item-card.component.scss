@@ -5,6 +5,7 @@
 
 .item-card {
   display: flex;
+  transition: transform 0.2s;
   justify-content: center;
   flex-direction: column;
   background-color: #d5a100;

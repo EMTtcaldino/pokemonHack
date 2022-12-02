@@ -1,0 +1,25 @@
+.types {
+  display: flex;
+  flex-direction: row;
+  ion-badge {
+    font-size: 16px;
+    border-radius: 20px;
+    margin: 1rem;
+  }
+}
+
+.name-container {
+  display: flex;
+  gap: 1rem;
+  font-size: 20px;
+  margin-left: 2rem;
+}
+
+.stat-name {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.data-pokemon {
+  margin-left: 1rem;
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal-pokemon',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal-pokemon.component.scss'],
 })
 export class ModalPokemonComponent implements OnInit {
-  constructor() {}
+  @Input() pokemonData: any;
+  constructor(public modalController: ModalController) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.pokemonData);
+  }
+
+  closeModal(): void {
+    this.modalController.dismiss();
+  }
 }
