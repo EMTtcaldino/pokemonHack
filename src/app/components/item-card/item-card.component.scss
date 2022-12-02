@@ -1,0 +1,23 @@
+.img {
+  width: 200px;
+  height: 200px;
+}
+
+.item-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #d5a100;
+  cursor: pointer;
+  user-select: none;
+  ion-text {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a285f;
+    text-align: center;
+  }
+}
+.item-card:hover {
+  transform: scale(1.1);
+}

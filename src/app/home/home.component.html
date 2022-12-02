@@ -6,6 +6,6 @@
     </ion-item>
   </ion-row>
   <ion-row>
-    <app-item-card *ngFor="let pokemon of pokemonList"></app-item-card>
+    <app-item-card *ngFor="let pokemon of pokemonList" [pokemonData]="pokemon"></app-item-card>
   </ion-row>
 </ion-content>

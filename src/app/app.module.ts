@@ -13,6 +13,7 @@ import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ItemCardComponent } from './components/item-card/item-card.component';
+import { ModalPokemonComponent } from './components/modal-pokemon/modal-pokemon.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import { ItemCardComponent } from './components/item-card/item-card.component';
     AppRoutingModule,
     // must be imported as the last module as it contains the fallback route
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, ModalPokemonComponent],
 
   providers: [
     {

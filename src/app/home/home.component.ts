@@ -17,10 +17,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    this.pokeService.getAllPokemons().subscribe((res) => {
-      res.results.map((pokemon: any) => {
-        this.pokemonList.push(pokemon);
+    for (let index = 1; index <= 150; index++) {
+      this.pokeService.getPokemon(index).subscribe((res) => {
+        this.pokemonList.push(res);
       });
-    });
+    }
   }
 }

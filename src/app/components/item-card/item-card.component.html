@@ -1,1 +1,4 @@
-<p>item-card works!</p>
+<ion-card class="item-card" (click)="showPokemonData()">
+  <ion-img class="img" [src]="pokemonData.sprites.front_default"></ion-img>
+  <ion-text>{{ pokemonData.name }}</ion-text>
+</ion-card>
