@@ -7,9 +7,18 @@ import { SharedModule } from '@shared';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ItemCardComponent } from '@app/components/item-card/item-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, TranslateModule, SharedModule, IonicModule, HomeRoutingModule],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SharedModule,
+    IonicModule,
+    HomeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   declarations: [HomeComponent, ItemCardComponent],
   exports: [ItemCardComponent],
 })
