@@ -6,9 +6,11 @@ import { IonicModule } from '@ionic/angular';
 
 import { I18nModule } from '@app/i18n';
 import { ShellComponent } from './shell.component';
+import { ItemCardComponent } from '@app/components/item-card/item-card.component';
 
 @NgModule({
   imports: [CommonModule, TranslateModule, IonicModule, I18nModule, RouterModule],
-  declarations: [ShellComponent],
+  declarations: [ShellComponent, ItemCardComponent],
+  exports: [ItemCardComponent],
 })
 export class ShellModule {}

@@ -1,31 +1,16 @@
-<ion-split-pane contentId="main-content">
-  <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-buttons *ngIf="isWeb" slot="end">
-          <ion-menu-toggle auto-hide="false">
-            <app-language-selector></app-language-selector>
-          </ion-menu-toggle>
-        </ion-buttons>
-        <ion-title>{{ 'APP_NAME' | translate }}</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <div ion-fixed>
-        <ion-list lines="full" class="ion-no-padding">
-          <ion-menu-toggle auto-hide="false">
-            <ion-item [routerDirection]="'root'" routerLink="/home" routerLinkActive="active">
-              <ion-label><span translate>Home</span></ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-          <ion-menu-toggle auto-hide="false">
-            <ion-item [routerDirection]="'root'" routerLink="/about" routerLinkActive="active">
-              <ion-label><span translate>About</span></ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </div>
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet id="main-content"></ion-router-outlet>
-</ion-split-pane>
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  <ion-title><span translate>PokeAPP</span></ion-title>
+</ion-toolbar>
+
+<ion-content class="container">
+  <ion-row>
+    <ion-item>
+      <ion-label position="floating">E-Mail</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+  </ion-row>
+  <app-item-card></app-item-card>
+</ion-content>
