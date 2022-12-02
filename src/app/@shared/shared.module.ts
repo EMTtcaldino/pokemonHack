@@ -9,7 +9,7 @@ import { SearchFilterPipe } from './filter-pipes/search-filter.pipe';
 
 @NgModule({
   imports: [IonicModule, TranslateModule, CommonModule],
-  declarations: [LoaderComponent, filterSample],
-  exports: [LoaderComponent, SearchFilterPipe],
+  declarations: [LoaderComponent, filterSample, SearchFilterPipe],
+  exports: [LoaderComponent, filterSample, SearchFilterPipe],
 })
 export class SharedModule {}
