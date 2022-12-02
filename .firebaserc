@@ -1,0 +1,15 @@
+{
+  "targets": {
+    "hackpokemon-61428": {
+      "hosting": {
+        "hackpokemon-61428": [
+          "hackpokemon-61428"
+        ]
+      }
+    }
+
+  },
+  "projects": {
+    "default": "hackpokemon-61428"
+  }
+}
