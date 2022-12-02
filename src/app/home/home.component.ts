@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   quote: string | undefined;
   isLoading = false;
   pokemonList: any[] = [];
-  pokemonListCSV = [{ name: 'charmander' }];
+  pokemonListCSV: any[] = [{ name: 'charmander' }];
   constructor(private pokeService: PokeapiService) {}
 
   ngOnInit() {
@@ -23,6 +23,10 @@ export class HomeComponent implements OnInit {
 
         this.pokemonListCSV.push({ name: res.name });
       });
+
+      if (this.pokemonList.length === 150) {
+        console.log(this.pokemonList);
+      }
     }
   }
 }

@@ -12,4 +12,5 @@ export const environment = {
   serverUrl: 'https://api.chucknorris.io',
   defaultLanguage: 'es-ES',
   supportedLanguages: ['es-ES'],
+  base_url: 'https://pokeapi.co/api/v2',
 };
